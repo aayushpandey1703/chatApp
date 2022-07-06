@@ -11,6 +11,10 @@ $('#sendMessage').on('submit',(e)=>{
         socket.emit('message',msg)
 })
 
+socket.on('increment',(count)=>{
+    document.getElementById('count').innerHTML="<b style='color:red'>"+count+"</b> users online"
+})
+
 // socket.on('countUpdate',(count)=>{
 //     console.log('the count has updated',count)
 // })
@@ -19,4 +23,3 @@ $('#sendMessage').on('submit',(e)=>{
 // $('#increment').on('click',()=>{
 //     socket.emit('increment')
 // })
-
